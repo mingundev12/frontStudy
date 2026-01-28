@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style >
+        /* style 태그는 css의 영역을 나타냄 */
+        /* 태그 선택자
+            태그명을 선택하기 div, img, span 등등
+            id로 선택하기 #선택자 , id 는 고유한 이름(html에서)
+            class로 선택하기 .선택자 태그 그룹화 목적
+
+            input[type = 'text'] -> input 태그 중에 type이 text 인것만 선택
+            input[name = 'email'] -> input 태그 중에 name 이 email 인것만 선택
+
+            가상 선택자
+
+            단위 : 절대단위, 상대단위
+            절대단위 : px, pt
+            상대단위 : %, em, rem, vh, vp - 반응형 만들 때 사용
+
+            여백
+            padding : border 안쪽 여백
+            margin : border 바깥쪽 여백
+         */
+        div {
+            background: red;
+        }
+        #bluebox {
+            background-color: blue;
+            width:10%;
+            margin: 5px;
+            position: fixed;
+            top: 30px;
+            right: 30px;
+            
+        }
+        .box {
+            border: 3px dashed black;
+            padding: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div id="redbox" class="box">
+        나는 빨간 상자입니다.
+    </div>
+    <div id="bluebox" >
+        나는 파랑 상자입니다.
+    </div>
+    <div class="box">
+        그냥 박스
+    </div>
+    
+</body>
+</html>
