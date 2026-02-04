@@ -5,18 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./store.css">
+    <link rel="stylesheet" href="./header_and_footer.css">
 </head>
 <body>
     <div id="wrap">
         <header id="header">
-            <div id="title">🍞🥐Bakery & Cafe🥨☕</div>
-            
+            <div id="titleBox">
+                <div id="title"><a href="./index.html">🍞🥐Bakery & Cafe🥨☕</a></div>
+            </div id="titleBox">
+            <nav id="nav">
+                <div class="menu"><a href="./index.html">HOME</a></div>
+                <div class="menu"><a href="./menu.html">MENU</a></div>
+                <div class="menu"><a href="./event.html">EVENT</a></div>
+                <div class="menu"><a href="./store.html">STORE</a></div>
+            </nav>
         </header>
         <main id="main">
-
+            <h1>매장 정보</h1>
+            <div>
+                <h2>위치</h2>
+                <div id="location">
+                    <div class="star">⭐</div>
+                </div>
+            </div>
+            <div class="right">
+                <h2>영업시간</h2>
+                <div id="openingHour">
+                    <span>open 08:00</span>
+                    <span>close 21:00</span>
+                </div>
+            </div>
+            <div>
+                <h2>좌석안내</h2>
+                <div id="sits"></div>
+            </div>
         </main>
         <footer id="footer">
-
+            <div id="copyright">Copyrightⓒ Team1</div>
+            <div id="tel">☎ 010-1111-1111</div>
+            <div id="address">주소 : 대전광역시 중구</div>
         </footer>
     </div>
     
