@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#wrap {
+    position: relative;
+    width: 1200px; /* 최대너비 */
+    margin: 0 auto;
+    /* border: 1px solid black;
+    height: 200px; */
+}
+
+#header {
+    padding: 10px 20px;
+}
+
+#logoWrap {
+    height: 50px;
+
+}
+
+#logoWrap img {
+    height: 100%;
+}
+
+#logoImg {
+    height: 50px;
+    width: 100px;
+    background: url("./small_Landscapes_cb1.jpg");
+    background-size: cover;
+}
+
+.menuLink {
+    /* 기본 size : 16px */
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 3px 7px;
+    margin: 0 20px;
+}
+
+/* #header { display: flex; } */
+
+#logoWrap {
+    float: left;
+}
+
+#logoImg {
+    float: left;
+}

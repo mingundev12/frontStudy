@@ -1,0 +1,66 @@
+/* position_style.css */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#box1 {
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    position: static;
+}
+
+#box2 {
+    width: 150px;
+    height: 150px;
+    background-color: firebrick;
+    position: relative;
+    right: 100px;
+    top: 200px;
+    transition: all 0.5s;
+}
+
+#box2:hover {
+    right: 0px;
+    top: 0px;
+    transition: all 2s;
+}
+
+#box3Parent {
+    position:relative;
+}
+
+#box3 {
+    width: 120px;
+    height: 120px;
+    background: greenyellow;
+    position: absolute;
+    /* left: 80px; */
+    top: 50px;
+    right: 100px;
+    transition: all 2s;
+}
+
+#box3:hover {
+    top: -50px;
+    transition: all 2s;
+}
+
+#wrap {
+    width: 1000px;
+    height: 1000px;
+}
+
+#box4 {
+    position: fixed;
+    left : 50px;
+    bottom: 50px;
+}
+
+#box5 {
+    position: sticky;
+    top: 0px;
+    
+}

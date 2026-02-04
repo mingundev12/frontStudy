@@ -1,0 +1,60 @@
+.row {
+    height:300px;
+    padding: 5px;
+    /* width:450px; */
+    /* margin: 0 auto; */
+    position: relative;
+    margin-top: 20px;
+}
+
+.col {
+    height:300px;
+    width:150px;
+    float:left;
+    margin: 0 10px;
+}
+
+#pic1 {
+    background: url("./2828921.jpg") no-repeat;
+    background-size: contain;
+}
+
+#pic2 {
+    background: url("./2844240.jpg");
+    background-size: cover;
+}
+
+#pic3 {
+    background: url("./6199398.jpg");
+    background-size: cover;
+}
+
+#pic4 {
+    background: url("./mountain1.png");
+    background-size: cover;
+}
+
+#pic5 {
+    background: url("./mountain2.png");
+    background-size: cover;
+}
+
+#pic6 {
+    background: url("./mountain3.png");
+    background-size: cover;
+}
+
+#pic7 {
+    background: url("./mountain4.png");
+    background-size: cover;
+}
+
+#pic8 {
+    background: url("./mountain5.png");
+    background-size: cover;
+}
+
+#pic9 {
+    background: url("./mountain6.png");
+    background-size: cover;
+}
