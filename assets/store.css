@@ -1,65 +1,107 @@
 #main {
-    padding: 50px 50px 150px;
+    padding: 50px;
     /* padding-bottom: 50px; */
     position: relative;
+    font-family: "Dongle", sans-serif;
+    font-optical-sizing: auto;
 }
 
-/* 배색 1, 2, 3 */
-#color1 {
-    background-color: chocolate;
+.store {
+    width: 1100px;
+    padding-bottom: 20px;
 }
 
-#color2 {
-    background-color: sandybrown;
+#main .store:nth-child(1) .text {
+    font-size: 60px;
 }
 
-#color3 {
-    background-color: bisque;
+.store .text {
+    font-size: 48px;
+    width: 1100px;
+    padding: 3px 10px;
 }
 
-#main h1 {
-    margin-bottom: 50px;
-}
-
-#main div {
-    /* text-decoration: none; */
-    position: relative;
-    height: 500px;
-    width: 800px;
-    margin-bottom: 5px;
-    background-color: bisque;
-}
-
-#main .right {
-    right: -400px;
-}
-
-#main div h2 {
-    font-size: 27.2px;
-    padding-bottom: 10px;
-}
-
-#main div div {
-    padding: 10px;
-    height: 450px;
-    width: 800px;
-    background-size: cover;
-    background-color: transparent;
-    position: relative;
-}
-
-#location {
-    background: url("./store_location.png");
+.store .chart {
+    width: 1100px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .star {
-    font-size : 50px;
+    background-color: transparent;
     position: absolute;
-    top: 140px;
-    left: 360px;
+    top: 450px;
+    left: 400px;
 }
 
-#main div div span {
-    display: block;
+.store .chart .img {
+    width: 700px;
+    flex-shrink: 1;
+    border-radius: 10px;
+}
+
+.store .chart .location {
+    height: 700px;
+    background-image: url("./store_location.png ");
+    background-size: cover;
+    background-position: center;
+    
+    flex-shrink: 1;
+}
+
+.store .chart .descript {
+    width: 400px;
+    white-space: normal;
+    font-size: 24px;
+    background-color: rgb(238, 183, 117);
+    border-radius: 5px;
+    flex-shrink: 1;
+    padding: 3px;
+}
+
+#main .store:nth-child(3) .chart .descript {
+    width: 400px;
+    white-space: normal;
+    font-size: 24px;
     background-color: transparent;
+    border-radius: 5px;
+    flex-shrink: 1;
+    padding: 3px;
+    opacity: 0; 
+}
+
+ul {
+    list-style-type: none;
+    margin:0;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 2px;
+    flex-shrink: 1;
+    background-color: transparent;
+}
+
+ul * {
+    flex: 1;
+    text-align: center;
+    font-size: 28px;
+    background-color: wheat;
+    border-radius: 5px;
+}
+
+.store .chart .workTime {
+    background-color: sandybrown;
+    border-radius: 7px;
+    padding: 5px 7px;
+}
+
+.store .chart .seats {
+    height: 580px;
+    background-image: url("./store_seats.png ");
+    background-size: cover;
+    background-position: center;
+    
+    flex-shrink: 1;
 }

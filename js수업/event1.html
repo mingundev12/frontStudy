@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // num = 10;
+        // num = 3.14;
+        // num = "문자열";
+
+        // var num = 13;
+        // num = 20;
+        // var num = 50;
+
+        // let a = 40;
+        // a = 400;
+        // // let a = 60;
+
+        // const b = 40;
+        // // b = 50;
+
+        // string_word = "문자열만";
+        // int_num = 10;
+
+        // let arr = new Array();
+        // let arr2 = [10,20,30];
+
+
+        function joinMessage(){
+            alert("가입 되었습니다.");
+        }
+
+        function clickMe() {
+            alert("하하하하하!! 집에갈시간이다!");
+        }
+
+        function here() {
+            let div = document.getElementById("me");
+            div.style.display = "none";
+        }
+
+        function over() {
+            let div = document.getElementById("me");
+            div.style.display = "block";
+        }
+
+        function pay() {
+            alert("결제가 완료되었습니다.");
+        }
+    </script>
+</head>
+<body>
+    <button onclick="joinMessage()">확인</button>
+    <div id="me" onclick="clickMe()">나를 클릭해줘!!</div>
+    <h3 onmouseover="here()" onmouseleave="over()">여기야!! 여기! &nbsp;&nbsp;&nbsp; 이리와!</h3>
+
+    <button onclick="pay()">결제</button>
+</body>
+</html>

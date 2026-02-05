@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>STORE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./store.css">
     <link rel="stylesheet" href="./header_and_footer.css">
 </head>
@@ -11,9 +15,10 @@
     <div id="wrap">
         <header id="header">
             <div id="titleBox">
-                <div id="title"><a href="./index.html">🍞🥐Bakery & Cafe🥨☕</a></div>
+                <div id="title"><a href="./index.html">🍞🥐Bakery & Café🥨☕</a></div>
             </div id="titleBox">
             <nav id="nav">
+                <div class="blank"></div>
                 <div class="menu"><a href="./index.html">HOME</a></div>
                 <div class="menu"><a href="./menu.html">MENU</a></div>
                 <div class="menu"><a href="./event.html">EVENT</a></div>
@@ -21,29 +26,65 @@
             </nav>
         </header>
         <main id="main">
-            <h1>매장 정보</h1>
-            <div>
-                <h2>위치</h2>
-                <div id="location">
-                    <div class="star">⭐</div>
+
+            <div class="store">
+                <div class="text">매장 정보</div>
+                <div class="chart">
+                    <div class="img"></div>
+                    <div class=""></div>
                 </div>
             </div>
-            <div class="right">
-                <h2>영업시간</h2>
-                <div id="openingHour">
-                    <span>open 08:00</span>
-                    <span>close 21:00</span>
+            <div class="store">
+                <div class="text">위치</div>
+                <div class="chart">
+                    <div class="img location">
+                        <div class="star">⭐<-Here</div>
+                    </div>
+                    <div class="descript">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem neque nam animi! Reprehenderit quo, vel optio cumque similique fugiat eveniet quam voluptates commodi beatae, placeat magni quos libero eaque sed? 
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut dicta magni veritatis, laborum blanditiis, officiis voluptatum inventore beatae consectetur omnis, hic explicabo repellat maxime. Neque fugiat recusandae quas doloribus quisquam?
+                    </div>
                 </div>
             </div>
-            <div>
-                <h2>좌석안내</h2>
-                <div id="sits"></div>
+            <div class="store">
+                <div class="text">영업시간</div>
+                <div class="chart">
+                    <div class="descript">a</div>
+                    <div class="img workTime">
+                        <ul>
+                            <li></li>
+                            <li>월요일~금요일</li>
+                            <li>토요일</li>
+                        </ul>
+                        <ul>
+                            <li>OPEN</li>
+                            <li>08:00</li>
+                            <li>19:00</li>
+                        </ul>
+                        <ul>
+                            <li>CLOSE</li>
+                            <li>11:00</li>
+                            <li>17:00</li>
+                        </ul>
+                        <ul>
+                            <div>일요일, 공휴일은 쉽니다.</div>
+                        </ul>
+                    </div>
+                </div>
             </div>
+            <div class="store">
+                <div class="text">좌석안내</div>
+                <div class="chart">
+                    <div class="img seats"></div>
+                    <div class="descript">Lorem ipsum dolor sit amet consectetur adipisicing elit. A quo, dolores, omnis necessitatibus, aperiam possimus eaque quod corporis soluta fuga neque harum hic veritatis magnam optio architecto repellat consectetur animi?</div>
+                </div>
+            </div>
+
         </main>
         <footer id="footer">
-            <div id="copyright">Copyrightⓒ Team1</div>
+            <div id="address">대전광역시 중구 ㅇㅇ로 ㅁㅁ</div>
             <div id="tel">☎ 010-1111-1111</div>
-            <div id="address">주소 : 대전광역시 중구</div>
+            <div id="copyright">Copyrightⓒ Team1</div>
         </footer>
     </div>
     
