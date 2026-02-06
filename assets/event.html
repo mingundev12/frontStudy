@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery & Cafe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./header_and_footer.css">
+    <link rel="stylesheet" href="./이벤트.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div id="titleBox">
+                <div id="title"><a href="./index.html">🍞🥐Bakery & Café🥨☕</a></div>
+            </div id="titleBox">
+            <nav id="nav">
+                <div class="blank"></div>
+                <div class="menu"><a href="./index.html">HOME</a></div>
+                <div class="menu"><a href="./menu.html">MENU</a></div>
+                <div class="menu"><a href="./event.html">EVENT</a></div>
+                <div class="menu"><a href="./store.html">STORE</a></div>
+            </nav>
+        </header>
+
+    <main id="main">
+
+        <!-- 이벤트 -->
+        <section class="event">
+            <button onclick="이벤트()">진행중인 이벤트</button>
+            <div class="event-wrap">
+                <div class="event-banner">발렌타인데이 이벤트~!</div>
+                <div class="event-banner">겨울메뉴 이벤트~!</div>
+            </div>
+        </section>
+
+        <!-- 쿠폰 -->
+        <section class="coupon">
+          <button onclick="쿠폰()">사용가능한 쿠폰</button>
+            <div class="coupon-wrap">
+                <div class="coupon-card">아메리카노 5% 할인</div>
+                <div class="coupon-card">도장 10개 시 원하는 음료 제공</div>
+                <div class="coupon-card">베이커리 2000원 할인</div>
+            </div>
+        </section>
+
+        <!-- 신메뉴 -->
+        <section class="new-menu">
+            <button onclick="신메뉴()">신메뉴</button>
+            <div class="new-menu-wrap">
+                <div class="menu-item">1.달콤한 신메뉴 소식</div>
+                <div class="menu-item">2.오늘의 추천 신메뉴</div>
+                <div class="menu-item">3.지금 가장 핫한 메뉴</div>
+                <div class="menu-item">4.놓치면 아쉬운 신메뉴</div>
+                <div class="menu-item">5.새로운 맛, 새로운 즐거움</div>
+            </div>
+        </section>
+
+        <!-- 이미지 -->
+        <section class="menu-images">
+            <div class="imgbox">
+                <div class="imgcard"><img src="./피스타치오케잌.jpg" alt="">
+                <P>피스타치오케잌</P></div>
+                <div class="imgcard"><img src="./딸기요거퐁당.jpg" alt="">
+                <P>딸기요거퐁당</P></div>
+                <div class="imgcard"><img src="./말차에빠진딸기.jpg" alt="">
+                    <P>말차에빠진딸기</P></div>
+                <div class="imgcard"><img src="./오렌지스무디.jpg" alt="">
+                    <P>오렌지스무디</P></div>
+                <div class="imgcard"><img src="./초코에반한딸기케잌.jpg" alt="">
+                    <P>초코에반한딸기케잌</P></div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer">
+        <div id="copyright">Copyright ⓒ Team1</div>
+        <div id="tel">☎ 010-1111-1111</div>
+        <div id="address">주소 : 대전광역시 중구</div>
+    </footer>
+
+</div>
+
+</body>
+</html>

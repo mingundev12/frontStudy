@@ -1,0 +1,41 @@
+
+#Drink{
+    margin: 0px 10px;
+}
+
+#Dessert{
+    margin: 0px 10px;
+}
+img{
+    width: 200px;
+    height: 300px;
+}
+.imgcard{    
+    height:350px;
+    width:200px;
+    margin:0 10px;
+    object-fit: cover;
+    
+}
+.imgcard img{
+    width:100%;    
+}
+
+.menulist_dlink {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+
+.menulist_dessert {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0px;
+    margin: 10px;
+}
+
+p{
+    font-size: 15px;
+}
