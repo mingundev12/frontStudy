@@ -6,6 +6,54 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="text" name="id" id="">
+    <form>
+        <h4>type="text" 는 문자 숫자 특수문자 입력가능</h4>
+        <input type="text" name="id" id="id"> <br>
+        <h4>type="password"는 비밀번호 입력시 사용, 모든 텍스트가 점으로 표현</h4>
+        <input type="password" name="password" id="password"> <br>
+        <h4>type="number"는 숫자만 입력 가능 min, max, step 설정가능</h4>
+        <input type="number" name="age" id="age" min="1" max="20" step="3"> <br>
+        <h4>type="email"은 이메일형식을 감지할 수 있는 타입</h4>
+        <input type="email" name="email" id="email" placeholder="이메일을 입력하세요">
+        <h4>type="color"는 색상을 선택할 수 있는 타입</h4>
+        <input type="color" name="bgcolor" id="bgcolor"> <br>
+        <h4>type="range"는 슬라이드 형태로 색, 음량, 밝기 등 조절</h4>
+        <input type="range" name="slide" id="slide"><br>
+        <h4>type="date"는 날짜 선택</h4>
+        <input type="date" name="date" id="date"><br>
+        <h4>type="time"는 시간 선택</h4>
+        <input type="time" name="time" id="time"><br>
+        <h4>type="month"는 연.월 선택</h4>
+        <input type="month" name="" id="">
+        <h4>날짜타입은 week - 연.주차, datetime-local</h4>
+        <input type="week" name="" id="">
+        <input type="datetime-local" name="" id="">
+
+        <br>
+        <h4>type="checkbox"는 다중선택을 위한 타입</h4>
+        <input type="checkbox" name="관심사" value="game">게임
+        <input type="checkbox" name="관심사" value="movie">영화
+        <input type="checkbox" name="관심사" value="music">음악
+        <br>  
+
+        <h4>type="radio"는 여러 선택지 중 하나만 선택</h4>
+        <input type="radio" name="fruit" id="banana">
+        <label for="banana">바나나</label>
+        <input type="radio" name="fruit" id="apple">
+        <label for="apple">사과</label>
+        <input type="radio" name="fruit" id="orange">
+        <label for="orange">오렌지</label>
+
+        <h4>type="file"은 파일 업로드를 위한 타입</h4>
+        <input type="file" name="file" id="">
+
+        <h4>type="hidden"은 사용자에게 제공하는 목적이 아닌 페이지 유지, 관리, 데이터 활용 등 페이지 처리를 위해 사용된다.</h4>
+        <input type="hidden" name="board_id" value="123">
+
+
+
+        <br> <br>
+        <button>등록</button>
+    </form>
 </body>
 </html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputField {
+            display: flex;
+        }
+    </style>
+    <script>
+        function 클릭커() {
+            let name = document.getElementById("userName");
+            alert(name.value);
+            name.value="까마귀";
+
+            let obj = document.querySelector("#userName");
+            console.dir(obj);
+        }
+
+        function calculateBirthYear() {
+            let age = document.getElementById("age");
+
+            let birthYear_ = "태어난 년도 : " + (2026 - age.value) + "년";
+            alert(birthYear_);
+        }
+
+        function sendAddress() {
+            let address = document.getElementById("address");
+            let result1 = document.getElementById("result1");
+
+            result1.innerText = address.value;
+            // innerHTML, innerText
+            // innerHTML = "<input >";
+            // innerText = "<input >";
+
+            // result1.innerHTML = "<input>";
+        }
+    </script>
+</head>
+<body>
+    <div class="inputField">
+        <input type="text" name="userName" id="userName" value="까마귀">
+        <button onclick="클릭커()">확인</button>
+    </div>
+
+    <br>
+    <!-- 문제 : 나이를 입력하여 태어난 년도를 alert을 출력 -->
+
+    <div class="inputField">
+        <input type="number" name="age" id="age">
+        <button onclick="calculateBirthYear()">나이 입력</button>
+    </div>
+
+
+    <br>
+    <!-- 문제 : 주소를 입력하여 div#result1에 출력하세요
+        힌트 : div 태그에는 value가 없어요. 대신 innerText에 넣으면돼요 -->
+
+    <div class="inputField">
+        <input type="text" name="address" id="address" placeholder="주소입력">
+        <button onclick="sendAddress()">주소 입력</button>
+    </div>
+    <div id="result1"></div>
+</body>
+</html>

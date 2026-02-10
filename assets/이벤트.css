@@ -1,66 +1,210 @@
-#main {
-    padding: 20px 10px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: bisque;
 }
 
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#header {
+    width: 1200px;
+    background-color: sandybrown;
+    font-family: "Playwrite NZ Basic", cursive;
+}
+
+#titleBox {
+    background-color: transparent;
+    color: bisque;
+    padding: 50px 10px 20px;
+}
+
+#title {
+    background-color: transparent;
+    font-size: 75px;
+    text-align: center;
+    color: bisque;
+}
+
+#title a {
+    background-color: transparent;
+    font-size: 75px;
+    color: bisque;
+    text-decoration: none;
+}
+
+#nav {
+    background-color: transparent;
+    color: darkred;
+    transition: 0.5s;
+    display: flex;
+    padding: 10px 7px 7px;
+    justify-content: space-evenly;
+    gap: 7px;
+}
+
+#nav .blank {
+    background-color: transparent;
+    flex: 5;
+}
+
+#nav .menu {
+    background-color: transparent;
+    text-align: center;
+    flex: 1;
+}
+
+#nav .menu a {
+    display: block;
+    font-size: 20px;
+    text-decoration: none;
+    background-color: transparent;
+    color: currentColor;
+}
+
+#nav .menu :hover {
+    transition: 0.5s;
+    background-color: burlywood;
+    color: brown;
+}
+
+
+
+#main {
+    height: auto;
+    width: 1200px;
+    padding: 50px 0;
+}
+
+#footer {
+    width: 1200px;
+    height: 60px;
+    background-color: saddlebrown;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    gap: 20px;
+    padding: 10px 20px;
+}
+
+#footer div {
+    /* height: auto; */
+    background-color: transparent;
+    color: black;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 20px;
+}
 section {
     margin-bottom: 70px;
     display: flex;
-    gap: 10px;
 }
-
-button {
-    padding: 5px;
-}
-
 
 /*이벤트*/
-#event-wrap {
+/* 공통 게시판 */
+.board {
+    margin-bottom: 30px;
+}
 
+.board-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: left;
+    background-color: sandybrown;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.board-content {
+    display: none;
+    padding: 25px;
+    background-color: bisque;
+    border-radius: 0 0 15px 15px;
+    margin-top: 5px;
+}
+
+/* 이벤트 */
+.event-wrap {
     display: flex;
     gap: 20px;
 }
 
-#banner {
+.event-banner {
     flex: 1;
-    height: 200px;
+    height: 180px;
+    display: flex;
     justify-content: center;
-    display: flex;
     align-items: center;
+    font-size: 24px;
     font-weight: bold;
-    background: #f2c94c;
+    color: white;
+    background: linear-gradient(135deg, chocolate, sandybrown);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    /* padding: 5px; */
 }
 
-#coupon-wrap {
+/* 쿠폰 */
+.coupon-wrap {
     display: flex;
     gap: 20px;
-
 }
 
-#coupon-card {
+.coupon-card {
     flex: 1;
-    padding: 30px;
+    padding: 25px;
+    font-size: 18px;
     text-align: center;
-    font-weight: bold;
-    border: 2px dashed #e67e22;
+    border: 3px dashed chocolate;
+    border-radius: 20px;
+    background-color: lightyellow;
 }
-#new-menu-wrap ul {
-    list-style: none;
-}
-#new-menu-wrap li {
 
-    padding: 12px 0;
-    border-bottom: 1px solid #ddd;
+/* 신메뉴 */
+.new-menu-wrap {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.new-menu-card {
+    width: 180px;
+    text-align: center;
+}
+
+.new-menu-card img {
+    width: 100%;
+    height: auto;
+    max-height: 220px;
+    /* object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px; */
+}
+
+.new-menu-card p {
+    font-size: 16px;
+    font-weight: bold;
 }
 
 img{
     margin-top: 20px;
     height: 300px;
+    
 }
 .imgbox {
     text-align: center;
     display: flex;
     justify-content: space-around;
-    width: 1200px;
+    padding: 10px 0px;
+    margin: 10px;
 }
 
 .imgcard{
@@ -105,6 +249,6 @@ background-size: cover;
 #footer {
     position: relative;   /* 또는 그냥 삭제 */
     width: 1200px;
-    background-color: chocolate;
+    background-color: saddlebrown;
     margin-top: 50px;
 }
