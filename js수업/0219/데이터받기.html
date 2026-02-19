@@ -10,8 +10,32 @@
 <body>
     <div id="wrap">
         <ul id="info">
-            
+
         </ul>
     </div>
 </body>
 </html>
+
+<script>
+    const dataURL = "./testone.json";
+    dataLoad(); // 함수호출
+
+// 서버로부터 데이터 받아오기 json
+    async function dataLoad() {
+        const response = await fetch(dataURL);
+
+        const data = await response.json();
+
+        console.log(data);
+
+        // 서버로부터 받은 데이터를 화면에 출력하는 방법
+        // 1. createElement 를 통해 태그를 만들고 append, appendChild로 추가하기
+        // 2. 백틱 `` 과 map을 사용하여 화면에 출력하기
+
+        document.getElementById("info").innerHTML =
+        `<li> id : ${data.info.id} </li>
+        <li> 이름 : ${data.info.name} </li>
+        <li> 점수 : ${data.info.score} </li>
+        `;
+    }
+</script>
