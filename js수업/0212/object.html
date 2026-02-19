@@ -1,0 +1,62 @@
+<!-- object.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+    // 자바스크립트로 API 통신할 때 가장 많이 다루는 건 객체이다
+    // API 통신은 json 으로 주거니 받거니 하는데
+    // json 으로 변환 하기 전에 스크립트에서는 객체를 먼저 만들어야 한다
+    // 서버(자바) 로부터 데이터를 받을때도 json 으로 받는다
+    // 받은 json 을 객체로 변환하여 스크립트에서 다뤄야 한다
+    // json 변환은 이미 함수가 있기에 그냥 쓰면 되므로 쉽게 할 수 있지만
+    // 객체 상태의 값을 다루는 것을 할 줄 알아야 하므로 반드시 익혀야 한다.
+    const number = [
+        {num : 1 , price : 1500},
+        {num : 3 , price : 5300},
+        {num : 6 , price : 73000},
+        {num : 4 , price : 1900},
+        {num : 9 , price : 20100},
+        {num : 8 , price : 10800},
+    ]
+
+    console.log(number[0].price); // 15000
+    console.log(number[2].num); // 6
+
+    // for( n of number) {
+    //     document.body.innerHTML += `<div>${n.num} ${n.price}</div>`;
+    // }
+    document.body.innerHTML = 
+        number.map(n => `<div>${n.num} ${n.price}</div>`).join("");
+
+    let num6 = number.find(n=>n.num===6);
+    console.log(num6);
+
+    let num20100 = number.find(n=>n.price===20100);
+    console.log(num20100);
+
+    let item = {
+        itemName : "닌텐도2", 
+        price: 600000, 
+        color: "black", 
+        releaseYear: 2025
+    };
+
+    const {itemName, price, color, releaseYear} = item;
+
+    console.log(itemName);
+
+    // let item1 = null;
+    // let p = item1.price;
+    // console.log(p);
+</script>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="">
+        <input type="text" id="keyword">
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>주소</th>
+                <th>취미</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr>
+                <td>이순신</td>
+                <td>34</td>
+                <td>통영시</td>
+                <td>전략게임</td>
+            </tr>
+            <tr>
+                <td>장보고</td>
+                <td>54</td>
+                <td>완도군</td>
+                <td>칼춤</td>
+            </tr>
+            <tr>
+                <td>문익점</td>
+                <td>28</td>
+                <td>개성</td>
+                <td>목화재배</td>
+            </tr>
+            <tr>
+                <td>정도전</td>
+                <td>41</td>
+                <td>서울</td>
+                <td>나무인형</td>
+            </tr>
+            <tr>
+                <td>정몽주</td>
+                <td>56</td>
+                <td>개경</td>
+                <td>시쓰기</td>
+            </tr>
+            <tr>
+                <td>정약용</td>
+                <td>49</td>
+                <td>수원</td>
+                <td>발명</td>
+            </tr>
+            <tr>
+                <td>장영실</td>
+                <td>29</td>
+                <td>서울</td>
+                <td>별자리보기</td>
+            </tr>
+            <tr>
+                <td>김유신</td>
+                <td>36</td>
+                <td>경주</td>
+                <td>술마시기</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+<script>
+    let key = document.getElementById("keyword");
+    key.addEventListener('keyup', function () {
+        const rows = Array.from(document.querySelectorAll("#tableBody tr"));
+        let value = this.value;
+
+        const res = rows.filter(row => row.textContent.toLowerCase().includes(value));
+
+        // 테이블의 전체 감추기
+        rows.forEach(row=>row.style.display="none");
+        // 찾은 tr만 보이기
+        res.forEach(row=>row.style.display="")
+    })
+</script>
