@@ -8,27 +8,131 @@
 <body>
     <main>
         <div id="inputBox">
-            <input type="text" name="myName" id="myName" placeholder="이름을 입력하세요.">
-            <button type="button" id="myNameBtn">확인</button>
+            이름 : <input type="text" id="myName" placeholder="이름을 입력하세요."> <br>
+            나이 : <input type="number" id="age"> <br>
+            직업 : <input type="text" id="job"> <br>    
+            <button type="button" id="bt">보내기</button>
         </div>
     </main>
 </body>
 </html>
 
 <script>
+    // 1. button 객체 가져오기
+    let sendBt = document.getElementById("bt");
+
+    // 2. button 객체에 click event 등록하기 - button click 하면 input 값 가져와 객체 생성
+    sendBt.addEventListener('click', send);
+
+    async function send() { // 버튼을 클릭하면 동작하는 함수 : 객체 생성, json 변환
+        let name = document.getElementById("myName").value;
+        let age = document.getElementById("age").value;
+        let job = document.getElementById("job").value;
+
+        // input 값 객체로 만들기 - key : value 구조로 객체 만들기
+        let data = {myName : name, myAge : age, myJob : job};
+
+        // 자바스크립트 객체를 json 으로 변환
+        // json : JavaScript Object Notation (자바스크립트 객체 표기법)
+        // JSON.parse(json->object) , JSON.stringify(object->json)
+        let jsonData = JSON.stringify(data);
+
+        alert(jsonData);
+
+        // json 을 server(java)에 보내기
+
+        const response = await fetch("/api/text.jsp", {
+            method : "POST", // 어떤 방식으로 보낼 것인지 GET, POST 등
+            headers : {"Content-type" : "application/json"},
+            body : jsonData
+        });
+
+        const result = await response.json();  // json 파싱 = JSON.parse(response);
+
+        if (result.ok) {
+            alert("성공");
+        } else {
+            alert("실패");
+            console.log(result);
+        }
+
+        // html 에서의 사용자 데이터를 서버에 보내기
+        //  1. 사용자가 입력 또는 선택한 데이터를 객체화하기
+        //  2. 객체를 json 으로 변환
+        //  3. fetch 함수를 통해 서버에 보내기 : await , async 사용
+        //  4. 서버의 결과를 받아서 사용자에게 알림
+    }
+
+    async function APISend(url, method, json) {
+        return await fetch(url, {
+                method: method,
+                headers: {"Content-type" : "application/json"},
+                body : json
+            }
+        );
+    }
+
+    // fetch , await
+    // browser 에 내장된 WEB API 함수이다.
+    // fetch( 주소 ) : server 에 request를 보낸다.
+    //  보냈으면 response를 받아야 한다. response 를 받기 위해서 await를 사용한다.
+    //  결과는 server에서 처리하는 data의 양이나 처리 속도에 따라 늦을수도, 빠를수도 있다.
+    //  그래서 결과가 언제 올지 모르기 때문에 await 를 이용해서 결과가 오기 전에
+    //  다른 작업이 가능하도록 하는 비동기 방식으로 처리해야 한다.
+    // function 앞에 async 를 붙이는 이유는
+    // fetch 를 통해 전달을 하고 결과를 받을때까지 기다려야 한다.
+    // 보내고 결과 받고 이 흐름은 동기이다.
+    // fetch 가 사용되는 함수에 흐름이 관리되기 위해서는 async 를 사용해야 한다.
+
+    // fetch 는 택배를 보내는 것
+    // promise 는 택배 배송 상태가 배송중으로 변경되는 것
+    // await 는 택배 배송 완료를 기다리는 것 (택배물건 받기전까지)
+    // async 는 배송추적을 하는 것
+
+
+    // 동기, 비동기
+    // 동기 : 코드가 위에서 아래로 한 줄 씩 끝날때까지 기다리면서 실행되는 것
+    //      실행 순서가 명확, 에측이 쉬움, 오래 걸리는 작업이 있다면 전체가 멈춤
+    /*
+        console.log("1번 작업 시작");
+        for(var i = 1; i <= 10000000; i++) {}
+        console.log("1번 작업 끝");
+        console.log("2번 작업 시작");
+     */
+    // 비동기 : 작업을 예약만 해두고 기다리지 않고 다음 코드로 넘어간다.
+    //         여러 작업을 동시에 실행하는 것처럼 처리하는 방식
+
+
+// 오늘 수업
+// javascript 객체 와 json 
+// html 에서 입력한 내용이나 선택한 값을 객체로 저장하여
+// json 으로 변환하기
+
+// form 태그를 통한 데이터 전달이 아닌 <API 통신방법>
+
+// html 에서 사용자가 입력 또는 선택한 data 를 java(server) 에 보내려면
+// 먼저 객체로 만들어 주고
+// 그 다음에 json 으로 변환하여 get(평문), post(비문) 방식 중 하나로 보낸다.
+
     // 이름을 입력받아 알림창에 출력하세요.
     // input 태그의 id 는 myName
     // value 를 가지는 태그 (입력할 수 있는) : input, textarea, select
-
+    // 이름을 입력받아서 알림창에 출력하는 방법 두 가지
+    //  1. button 태그를 클릭하여 출력하는 방법 : click 이벤트
+    //  2. 이름을 입력하면 출력하는 방법 : keyup 이벤트
+/*
     let myName = document.querySelector("#myName");
-    let myNameBtn = document.querySelector("#myNameBtn");
+    let bt = document.querySelector("#bt");
 
-    myNameBtn.addEventListener('click', () => {
+    bt.addEventListener('click', () => {
         alert(myName.value);
+        myName.value = '';
     });
 
     myName.addEventListener('keydown', (e) => {
         if(e.key === 'Enter')
-            myNameBtn.click();
+            bt.click();
     });
+*/
+
 </script>
